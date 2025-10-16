@@ -5,27 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Happy Birthday Khatisa!</title>
   <style>
-    body {
-      background: linear-gradient(to right, #ffecd2, #fcb69f);
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      text-align: center;
-      padding: 50px;
-      color: #333;
-    }
-    .khatisa{
-         background: linear-gradient(to right, #ffecd2, #fcb69f);
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      text-align: center;
-      padding: 50px;
-      color: #333;
-    }
-    body {
-  background-image: url('Khatisa.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
+ body {
+    /* show whole image without cropping */
+    background-image: url('Khatisa.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain; /* <-- show whole image */
+    background-color: #ffecd2; /* fallback visible in empty areas */
+    min-height: 100vh;         /* ensure full viewport height */
+    margin: 0;
+    font-family: cursive,'Comic Sans MS' , sans-serif;
+    text-align: center;
+    color: #333;
+    padding: 30px;
+  }
+
+    /* keep your card readable */
+  .khatisa {
+    background: rgba(255,255,255,0.8);
+    display: inline-block;
+    padding: 30px;
+    border-radius: 16px;
+  }
 
     h1 {
       font-size: 3em;
@@ -58,6 +59,7 @@
   <div class="cake">🎈🎁🎈</div>
 </body>
 </html>
+
 
 
 
