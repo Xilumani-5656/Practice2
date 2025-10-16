@@ -5,20 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Happy Birthday Khatisa!</title>
   <style>
- body {
-    /* show whole image without cropping */
-    background-image: url('Khatisa.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain; /* <-- show whole image */
-    background-color: #ffecd2; /* fallback visible in empty areas */
-    min-height: 100vh;         /* ensure full viewport height */
-    margin: 0;
-    font-family: cursive,'Comic Sans MS' , sans-serif;
-    text-align: center;
-    color: #333;
-    padding: 30px;
-  }
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  overflow: hidden;
+  text-align: center;
+  color: #333;
+  background: none;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: 
+    linear-gradient(to right, rgba(255, 236, 210, 0), rgba(252, 182, 159, 0)),
+    url("khatisa.jpg") center/cover no-repeat;
+  z-index: -1; /* keeps it behind all animations */
+}
+
 
     /* keep your card readable */
   .khatisa {
@@ -27,6 +35,8 @@
     padding: 30px;
     border-radius: 16px;
   }
+  
+  
 
     h1 {
       font-size: 3em;
@@ -52,14 +62,10 @@
 <body>
   <div class="cake">🎂</div>
   <div class="khatisa">
-  <h1>Happy Birthday, Khatisa! 🎉</h1>
-  <p>Wishing you a day filled with love, laughter, and cake!</p>
-  <p>You're amazing, and today we celebrate YOU! 💖</p>
+    <h1>Happy Birthday, Khatisa! 🎉</h1>
+    <p>Wishing you a day filled with love, laughter, and cake!</p>
+    <p>You're amazing, and today we celebrate YOU! 💖</p>
   </div>
   <div class="cake">🎈🎁🎈</div>
 </body>
 </html>
-
-
-
-
